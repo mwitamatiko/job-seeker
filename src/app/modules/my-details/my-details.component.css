@@ -1,0 +1,65 @@
+.mat-form-field {
+    margin-top: 16px;
+}
+
+app-academics {
+    left: 150px;
+}
+
+app-documents {
+    left: 150px;
+}
+
+
+/*
+mat-stepper{
+  font-size: 10px;
+} */
+
+
+/* personal information css */
+
+mat-form-field {
+    margin: 0 5px 0;
+    padding: 5px;
+    width: 30%;
+}
+
+.mat-radio-button~.mat-radio-button {
+    margin-left: 18px;
+}
+
+mat-form-field {
+    margin-right: 12px;
+    font-size: 10px;
+}
+
+h2 {
+    font-size: 15px;
+}
+
+mat-radio-group {
+    font-size: 10px;
+}
+
+mat-radio-button {
+    font-size: 10px;
+}
+
+.add {
+    margin-top: 10px;
+    margin-left: 700px;
+}
+
+.minus {
+    margin-left: 900px;
+}
+
+.addExeperience {
+    margin-left: 230px;
+    width: 500px;
+}
+
+.minusExperience {
+    margin-left: 900px;
+}

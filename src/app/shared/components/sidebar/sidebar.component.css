@@ -1,0 +1,26 @@
+
+.profile-card{
+  text-align: center;
+  padding: 2px;
+}
+img{
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.list-item-active{
+  color: #039be5;
+}
+mat-nav-list a{
+  font-size: 12px;
+}
+h2{
+  text-decoration: underline;
+  height: 20px;
+}
+.mat-nav-list a{
+  height: 30px;
+}
+

@@ -1,0 +1,45 @@
+<form [formGroup]="experienceForm4">
+    <h3 mat-dialog-title>
+        Edit Experience
+        <mat-divider></mat-divider>
+    </h3>
+
+    <div mat-dialog-content>
+
+
+        <mat-form-field appearance="fill">
+            <mat-label>Company Name</mat-label>
+            <input formControlName="company_name" matInput placeholder="Company Name">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Work Position</mat-label>
+            <input formControlName="work_position" matInput placeholder="Work Position">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Number of Years</mat-label>
+            <input formControlName="years_of_experience" matInput placeholder="Number of Years">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Referee Email</mat-label>
+            <input formControlName="referee_email" matInput placeholder="example@gmail.com">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Referee Name</mat-label>
+            <input formControlName="referee_name" matInput placeholder="Referee Name">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Referee Phone</mat-label>
+            <input formControlName="referee_phone" matInput placeholder="Referee Phone">
+        </mat-form-field>
+
+    </div>
+    <div mat-dialog-actions [align]="'end'">
+        <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+        <button style="margin-left: 8px;" mat-raised-button color="primary" (click)="onUpdateExperience()">Update</button>
+    </div>
+</form>

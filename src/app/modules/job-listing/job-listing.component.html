@@ -1,0 +1,30 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4 col-sm-12 score-cards" *ngFor="let item of this.paramsEmployeeData">
+            <mat-card class="score-card">
+                <div class="pull-left display-block">
+
+                    <form [formGroup]="jobGroup">
+
+                        <div>
+                            <input formControlName="job" type="hidden">
+                            <h4>Job Title</h4>
+                            <small>Job Level </small><br>
+                            <small>Deadline </small>
+                        </div>
+
+
+                        <div class="readMore">
+                            <button mat-raised-button color="primary" (click)="openDialog4()">Read More</button>
+                        </div>
+
+
+                    </form>
+                </div>
+
+
+            </mat-card>
+        </div>
+    </div>
+
+</div>

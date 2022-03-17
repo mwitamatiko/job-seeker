@@ -1,0 +1,53 @@
+<h3 mat-dialog-title>
+    Edit Education
+    <mat-divider></mat-divider>
+</h3>
+
+<div mat-dialog-content>
+    <form [formGroup]="educationForm4">
+
+        <mat-form-field appearance="fill">
+            <mat-label>Institution Level</mat-label>
+            <input formControlName="institution_level" matInput placeholder="Institution Level">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Institution Name</mat-label>
+            <input formControlName="institution_name" matInput placeholder="Institution Name">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Enrollment Year</mat-label>
+            <input formControlName="enrolled_year" matInput [matDatepicker]="picker">
+            <mat-datepicker-toggle matSuffix [for]="picker">
+                <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+            </mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Graduated Year</mat-label>
+            <input formControlName="graduated_year" matInput [matDatepicker]="picker1">
+            <mat-datepicker-toggle matSuffix [for]="picker1">
+                <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+            </mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Certification</mat-label>
+            <input formControlName="certification" matInput placeholder="Certification">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>GPA</mat-label>
+            <input formControlName="gpa" matInput placeholder="GPA">
+        </mat-form-field>
+
+    </form>
+
+</div>
+<div mat-dialog-actions [align]="'end'">
+    <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+    <button style="margin-left: 8px;" mat-raised-button color="primary" (click)="onUpdateEducation()">Update</button>
+</div>

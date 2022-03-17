@@ -1,0 +1,353 @@
+<mat-stepper #stepper>
+    <mat-step>
+
+        <ng-container>
+            <form [formGroup]="personalInfoForm">
+                <ng-template matStepLabel>Personal Info</ng-template>
+
+                <h2>Personal Information </h2>
+                <mat-divider></mat-divider>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>First Name</mat-label>
+                    <input formControlName="first_name" matInput placeholder="First Name">
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Last Name</mat-label>
+                    <input formControlName="last_name" matInput placeholder="Last Name">
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Middle Name</mat-label>
+                    <input formControlName="middle_name" matInput placeholder="Middle Name">
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Religion</mat-label>
+                    <input formControlName="religion" matInput placeholder="Religion">
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>National Identity</mat-label>
+                    <input formControlName="national_id" matInput placeholder="National Identity">
+                </mat-form-field>
+                <br>
+                <mat-radio-group formControlName="gender" aria-label="Select Gender">
+                    <label>Gender</label>
+                    <mat-radio-button [value]="'Male'">Male</mat-radio-button>
+                    <mat-radio-button [value]="'Female'">Female</mat-radio-button>
+                    <mat-radio-button [value]="'Intersex'">Intersex</mat-radio-button>
+                    <!-- <mat-radio-button value="4">Prefer not to say</mat-radio-button> -->
+                </mat-radio-group>
+
+                <div>
+                    <button mat-button matStepperNext color="primary">Next</button>
+                </div>
+            </form>
+        </ng-container>
+
+
+    </mat-step>
+
+    <!-- Home Address -->
+    <mat-step>
+        <ng-container>
+            <form [formGroup]="homeForm">
+                <ng-template matStepLabel>Home Address</ng-template>
+
+
+                <h2>Home Address </h2>
+                <mat-divider></mat-divider>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Nationality</mat-label>
+                    <input formControlName="nationality" matInput placeholder="Nationality">
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Home County</mat-label>
+                    <input formControlName="home_county" matInput placeholder="Home County">
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Home Sub-County</mat-label>
+                    <input formControlName="sub_county" matInput placeholder="Home Sub-County">
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Current Country</mat-label>
+                    <input formControlName="current_country" matInput placeholder="Current Country">
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Current County</mat-label>
+                    <input formControlName="current_county" matInput placeholder="Current County">
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Current Sub-County</mat-label>
+                    <input formControlName="current_sub_county" matInput placeholder="Current Sub-County">
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Postal Address</mat-label>
+                    <input formControlName="postal_address" matInput placeholder="Postal Address">
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Postal Code</mat-label>
+                    <input formControlName="postal_code" matInput placeholder="Postal Code">
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>City</mat-label>
+                    <input formControlName="city" matInput placeholder="Current City/Town">
+                </mat-form-field>
+
+
+                <div>
+                    <button mat-button matStepperPrevious color="primary">Previous</button>
+                    <button mat-button matStepperNext color="primary">Next</button>
+                </div>
+            </form>
+        </ng-container>
+    </mat-step>
+
+    <!-- Contact Info -->
+    <mat-step>
+        <ng-container>
+
+            <form [formGroup]="contactForm">
+                <ng-template matStepLabel>Contact Info</ng-template>
+
+
+                <h2>Contact Information</h2>
+                <mat-divider></mat-divider>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Personal Phone Number</mat-label>
+                    <input formControlName="personal_phone" matInput placeholder="Personal Phone Number">
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Home Telephone</mat-label>
+                    <input formControlName="home_telephone" matInput placeholder="Home Telephone">
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Other Telephone</mat-label>
+                    <input formControlName="other_telephone" matInput placeholder="Other Telephone">
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Email</mat-label>
+                    <input formControlName="email_address" matInput placeholder="example@gmail.com">
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Linkedin</mat-label>
+                    <input formControlName="linkedin" matInput placeholder="Linkedin">
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Github</mat-label>
+                    <input formControlName="github" matInput placeholder="Github">
+                </mat-form-field>
+
+                <div>
+                    <button mat-button matStepperPrevious color="primary">Previous</button>
+                    <button mat-button matStepperNext color="primary">Next</button>
+                </div>
+            </form>
+        </ng-container>
+    </mat-step>
+
+
+
+    <!-- Documents -->
+    <mat-step>
+        <ng-container>
+            <form [formGroup]="educationFirstForm">
+                <ng-template matStepLabel>Education</ng-template>
+
+                <h2>Education Details</h2>
+                <mat-divider></mat-divider>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Highest Level of Education</mat-label>
+                    <input formControlName="highest_level_of_education" matInput placeholder="Highest Level of Education">
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Course Programme</mat-label>
+                    <input formControlName="course_programme" matInput placeholder="Course Programme">
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Enrollment Status</mat-label>
+                    <input formControlName="enrollment_status" matInput placeholder="Enrollment Status">
+                </mat-form-field>
+
+                <!-- <h2>Upload Documents</h2>
+
+                <mat-divider></mat-divider>
+                <mat-label>Resume </mat-label>
+                <input formControlName="resume" type="file" (onchange)="onFileSelected($event)" required>
+
+                <mat-label>Cover Letter </mat-label>
+                <input formControlName="cover_letter" type="file" (onchange)="onFileSelected($event)" required>
+
+                <mat-label>Transcripts</mat-label>
+                <input formControlName="transcripts" type="file" (onchange)="onFileSelected($event)" required> -->
+
+                <div>
+                    <button class="add" mat-icon-button color="primary" (click)="addEducationItems()">
+                      <mat-icon>add_circle</mat-icon>
+                      Add Another Education
+                    </button>
+
+                    <ol>
+
+                        <li *ngFor="let item of t2.controls; let i = index">
+                            <button class="minus" mat-icon-button color="warn" (click)="removeEducationItems(i)">
+                            <mat-icon>remove_circle</mat-icon>
+
+                          </button>
+
+                            <form [formGroup]="item">
+
+                                <!-- other education -->
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Institution Level</mat-label>
+                                    <input formControlName="institution_level" matInput placeholder="Institution Level">
+                                </mat-form-field>
+
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Institution Name</mat-label>
+                                    <input formControlName="institution_name" matInput placeholder="Institution Name">
+                                </mat-form-field>
+
+                                <mat-form-field class="example-full-width" appearance="fill">
+                                    <mat-label>Enrollment Year</mat-label>
+                                    <input formControlName="enrolled_year" matInput [matDatepicker]="picker">
+                                    <mat-datepicker-toggle matSuffix [for]="picker">
+                                        <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                                    </mat-datepicker-toggle>
+                                    <mat-datepicker #picker></mat-datepicker>
+                                </mat-form-field>
+
+                                <mat-form-field class="example-full-width" appearance="fill">
+                                    <mat-label>Graduated Year</mat-label>
+                                    <input formControlName="graduated_year" matInput [matDatepicker]="picker1">
+                                    <mat-datepicker-toggle matSuffix [for]="picker1">
+                                        <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                                    </mat-datepicker-toggle>
+                                    <mat-datepicker #picker1></mat-datepicker>
+                                </mat-form-field>
+
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Certification</mat-label>
+                                    <input formControlName="certification" matInput placeholder="Certification">
+                                </mat-form-field>
+
+                                <mat-form-field appearance="fill">
+                                    <mat-label>GPA</mat-label>
+                                    <input formControlName="gpa" matInput placeholder="GPA">
+                                </mat-form-field>
+
+                            </form>
+                        </li>
+
+                    </ol>
+
+                </div>
+
+                <div>
+
+                    <button mat-button matStepperPrevious color="primary">Previous</button>
+                    <button mat-button matStepperNext color="primary">Next</button>
+                </div>
+            </form>
+        </ng-container>
+    </mat-step>
+
+    <mat-step>
+        <ng-container>
+            <ng-template matStepLabel>Experience</ng-template>
+            <mat-divider></mat-divider>
+            <h2>Experience Information</h2>
+            <mat-divider></mat-divider>
+
+            <div>
+
+                <button class="addExeperience btn btn-block btn-sm btn-info" (click)="addExperienceItems()">
+                Add Experience Details
+          </button>
+
+                <ol>
+
+                    <li *ngFor="let item of t.controls; let i = index">
+
+                        <button class="minusExperience" mat-icon-button color="warn" (click)="removeExperienceItems(i)">
+                    <mat-icon>remove_circle</mat-icon>
+
+                  </button>
+
+                        <form [formGroup]="item">
+
+                            <mat-form-field appearance="fill">
+                                <mat-label>Company Name</mat-label>
+                                <input formControlName="company_name" matInput placeholder="Company Name">
+                            </mat-form-field>
+
+                            <mat-form-field appearance="fill">
+                                <mat-label>Work Position</mat-label>
+                                <input formControlName="work_position" matInput placeholder="Work Position">
+                            </mat-form-field>
+
+                            <mat-form-field appearance="fill">
+                                <mat-label>Number of Years</mat-label>
+                                <input formControlName="years_of_experience" matInput placeholder="Number of Years">
+                            </mat-form-field>
+
+                            <mat-form-field appearance="fill">
+                                <mat-label>Referee Email</mat-label>
+                                <input formControlName="referee_email" matInput placeholder="example@gmail.com">
+                            </mat-form-field>
+
+                            <mat-form-field appearance="fill">
+                                <mat-label>Referee Name</mat-label>
+                                <input formControlName="referee_name" matInput placeholder="Referee Name">
+                            </mat-form-field>
+
+                            <mat-form-field appearance="fill">
+                                <mat-label>Referee Phone</mat-label>
+                                <input formControlName="referee_phone" matInput placeholder="Referee Phone">
+                            </mat-form-field>
+
+                        </form>
+                    </li>
+                </ol>
+            </div>
+
+            <div>
+                <button mat-button matStepperPrevious color="primary">Previous</button>
+                <button mat-button matStepperNext color="primary">Next</button>
+            </div>
+        </ng-container>
+    </mat-step>
+
+
+    <mat-step>
+        <ng-template matStepLabel>Submit details</ng-template>
+        <p>Please confirm you have entered all the details before you submit the form</p>
+        <mat-divider></mat-divider>
+        <div>
+
+            <!-- <button mat-button color="primary" type="button" routerLink="/profile">View Profile</button> -->
+            <button mat-button matStepperPrevious color="primary">Previous</button>
+            <button mat-button type="submit" color="primary" (click)="onSubmit()">Submit</button>
+        </div>
+    </mat-step>
+</mat-stepper>
