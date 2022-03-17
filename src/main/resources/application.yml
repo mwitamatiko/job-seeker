@@ -1,0 +1,47 @@
+server:
+  port: 0891
+
+spring:
+  application:
+    name: RAO-Server
+
+  servlet:
+    multipart:
+      file-size-threshold: 20MB
+      max-file-size: 20MB
+      max-request-size: 25MB
+
+  file:
+      upload-dir: src/main/resources/Uploads
+
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+  datasource:
+    url: jdbc:mariadb://localhost:3306/rao_solution
+    username: root
+    password: 45678
+    driverClassName: org.mariadb.jdbc.Driver
+
+  instance:
+    hostname: localhost
+
+    #**********************************************Schedule Events ********************************************
+    #second, minute, hour, day of month, month, day(s) of week
+    #* "0 0 * * * *" = the top of every hour of every day.
+    #* "*/10 * * * * *" = every ten seconds.
+    #* "0 0 8-10 * * *" = 8, 9 and 10 o'clock of every day.
+    #* "0 0 8,10 * * *" = 8 and 10 o'clock of every day.
+    #* "0 0/30 8-10 * * *" = 8:00, 8:30, 9:00, 9:30 and 10 o'clock every day.
+    #* "0 0 9-17 * * MON-FRI" = on the hour nine-to-five weekdays
+    #* "0 0 0 25 12 ?" = every Christmas Day at midnight
+#    cron.expression= 0/10 * * * * *
+    #cron.expression= 0 0 12 * * ? 2019
+
+#    logging.file.name=application_status_log.csv
+#    logging.file.path=.
